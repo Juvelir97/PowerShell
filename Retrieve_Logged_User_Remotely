@@ -1,4 +1,4 @@
 $comp = Get-Content "path to a file"
 foreach ($i in $comp) {
-    Get-WmiObject -Class win32_computersystem -ComputerName $i | select username,name | Out-File -FilePath "path to an output file"
+    Get-WmiObject -Class win32_computersystem -ComputerName $i | select username,name | Add-Content -FilePath "path to an output file"
     }
