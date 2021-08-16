@@ -1,0 +1,3 @@
+$compname = get-content "C:\test\CN.txt"
+    foreach ($i in $compname) {
+        cp '\\<servip>\Folder\x.txt' "\\$i\C$\Users\Public\Desktop\" -Verbose }
