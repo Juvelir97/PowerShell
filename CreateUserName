@@ -1,0 +1,3 @@
+$FirstName = 'Oleg'
+$LastName = 'Ivanov'
+$userName = '{0}{1}' -f ($FirstName.Substring(0, 1)).ToLower(), $LastName.ToLower()
