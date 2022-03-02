@@ -1,0 +1,12 @@
+$source_folder = "C:\test"
+$destination_folder = 'C:\test2'
+
+ 
+foreach ($file in Get-ChildItem $source_folder | Where-Object {$_.lastwritetime.year -eq 2022}  ) {
+   
+    $test = Test-Path -Path $destination_folder\$file
+    if ($test -eq $false) {
+        Copy-Item -Path $source_folder\$file -Destination $destination_folder
+        }
+}
+        
