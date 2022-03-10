@@ -1,0 +1,4 @@
+# Take CN from AD and feed to Get-Process
+  Get-AdComputer -filter * | select @{n='computername',e=$_.name}} | Get-Process
+# Another way for commands with no option for pipline
+  Get-WmiObject -class win32_bios -ComputeName (get-adcomputer -filter * | select -expand name
