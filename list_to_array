@@ -1,0 +1,8 @@
+$var = "
+pop
+rock
+jazz
+".split("`n")
+
+#Output
+$var[1] = pop
